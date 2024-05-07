@@ -1,7 +1,8 @@
+import user
 
 class usermanager:
     def __init__(self, username, password):
-        user_database = {}
+        self.user_manager.user_database = {}
         self.usermanager.username = 'username'
         self.usermanager.password = "password"
 
@@ -31,10 +32,13 @@ def register():
     if len(username) <= 4:
         print("Username must be atleast 4 characters long.")
         return
-    else:
-        for username in usermanager.user_database.username
-
+    elif username in user.user_manager.user_database:
+        print("Username already taken.")
+        return
+        
     if len(password) <= 8:
         print("Password must be 8 characters long.")
         return
     else:
+        usermanager.user_database[username] = {"password":  password} 
+        print(f"Welcome {usermanager.username}")
